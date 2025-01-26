@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Mahipal was supposed to complete his college assignment but well...</h1>
+                <h1 class = "header_text">Will you get me Pokemon cards?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnZ1M2N6NTh0NXZvdXJkOTlhMWp3YnYzY2w1bm1haTN2OG80cmRydSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26hpKUuT0LoK9rSE0/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                </div>
+                <div>
+                    <h1 class = "header_text">FOR EVERYTHING YOU CONSIDER HOLY IN THID WORLD, YOU CAN'T PRESS NO</h1>
+                </div>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
